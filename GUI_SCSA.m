@@ -45,8 +45,8 @@ end
 % End initialization code - DO NOT EDIT
 
 % --- Executes just before GUI_SCSA is made visible.
-% addpath ./Functions
-addpath ./Functionsm
+addpath ./Functions
+% addpath ./Functionsm
 
 % addpath G:\My Drive\MyCodes\GitHub\InProcess_Projects\SCSA_Rec_Denoising_Scripts\Function\SCSA_main_functions
 % addpath G:\My Drive\MyCodes\GitHub\InProcess_Projects\SCSA_Rec_Denoising_Scripts\Function\SCSA_main_functions\Denoising

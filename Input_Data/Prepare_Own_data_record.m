@@ -19,3 +19,10 @@ Xp=Xp(1:M,:);
 Xn=Xn(1:M,:);
 
 save('EEG_data_UCI.mat','Fs','Xp','Xn','y','t','N')
+
+X=[Xp;Xn];
+X = normalize(X,'range');
+Xp=X(1:M,:);
+Xn=X(M+1:end,:);
+save('EEG_data_UCI_normalized.mat','Fs','Xp','Xn','y','t','N')
+
