@@ -1,8 +1,8 @@
 
 
-![SCSAv1_a](https://user-images.githubusercontent.com/32301374/60066290-4fc31780-970f-11e9-8476-e1369ccffa9a.png)
+![picture](https://user-images.githubusercontent.com/32301374/60793212-e65ff180-a16f-11e9-8e70-a8d2718ec8bb.png)
 
-Is a signal reconstruction tool based on Semi-Classical Signal Analysis (SCSA) method.
+Is a feature generation  tool based on Semi-Classical Signal Analysis (SCSA) method.
 
 By : chahid abderrazak,  PhD Student,         email:abderrazak.chahid@gmail.com
 
@@ -21,14 +21,12 @@ run GUI_SCSA.m using matlab
 ## How to process a signal
 To run the code, please follow this steps:
 
-1- Choose you signal and its propertires 
-
-2- Choose the interval of   Eigenvalues to be use for the reconstruction
-
-3- Choose the runing mode :
+1- **Load your dataset**
+3- Choose the parameter h to se by runing one of the two mode :
 * Manual mode, Choose the  SCSA parameters h, Fs 
 * Automatic please go directly to step 4
        
-4-   Click Signal reconstruction button
+4-   Click **Signal reconstruction** button
+5- If you are satisfied by the chosen h, click **Classify Now** to run 5 fold crossvalidatin using SVM. 
 
 
