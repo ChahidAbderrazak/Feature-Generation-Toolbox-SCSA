@@ -23,7 +23,7 @@ function varargout = GUI_SCSA(varargin)
 
 % Edit the above text to modify the response to help GUI_SCSA
 
-% Last Modified by GUIDE v2.5 08-Jul-2019 09:20:41
+% Last Modified by GUIDE v2.5 08-Jul-2019 10:28:50
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -72,6 +72,8 @@ guidata(hObject, handles);
 if strcmp(get(hObject,'Visible'),'off')
 
 %     update_displays
+set(handles.H_paramtr,'Enable', 'off'); 
+
 end
 
 
@@ -1262,9 +1264,9 @@ function man_h_Callback(hObject, eventdata, handles)
 
 % Hint: get(hObject,'Value') returns toggle state of man_h
 set(handles.H_paramtr,'Enable', 'on'); 
-set(handles.uipanel1,'Visible', 'on'); 
+% set(handles.uipanel1,'Visible', 'on'); 
 set(handles.uipanel2,'Visible', 'on'); 
-set(handles.uipanel3,'Visible', 'on'); 
+% set(handles.uipanel3,'Visible', 'on'); 
 
 % --- Executes on button press in auto_h.
 function auto_h_Callback(hObject, eventdata, handles)
@@ -1274,9 +1276,6 @@ function auto_h_Callback(hObject, eventdata, handles)
 
 % Hint: get(hObject,'Value') returns toggle state of auto_h
 set(handles.H_paramtr,'Enable', 'off'); 
-set(handles.uipanel1,'Visible', 'off'); 
-set(handles.uipanel2,'Visible', 'off'); 
-set(handles.uipanel3,'Visible', 'off'); 
 
 
 
@@ -1323,6 +1322,7 @@ function MSE_a2_CreateFcn(hObject, eventdata, handles)
 if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
     set(hObject,'BackgroundColor','white');
 end
+
 
 
 % --- Executes on button press in Load_datas.
@@ -1493,6 +1493,29 @@ function N_folds_Callback(hObject, eventdata, handles)
 % --- Executes during object creation, after setting all properties.
 function N_folds_CreateFcn(hObject, eventdata, handles)
 % hObject    handle to N_folds (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+
+
+function MSE_a1_Callback(hObject, eventdata, handles)
+% hObject    handle to MSE_a1 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of MSE_a1 as text
+%        str2double(get(hObject,'String')) returns contents of MSE_a1 as a double
+
+
+% --- Executes during object creation, after setting all properties.
+function MSE_a1_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to MSE_a1 (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 
